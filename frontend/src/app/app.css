@@ -3,3 +3,7 @@
     box-sizing: border-box;
     padding: 0;
 }
+
+:root {
+    --max-screen-width: 1300px
+}
