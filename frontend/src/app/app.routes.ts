@@ -1,7 +1,7 @@
 import { Routes } from '@angular/router';
-import { TaxonomicMapComponent } from './pages/taxonomic-map/taxonomic-map';
+import { TaxonomicMapPageComponent } from './pages/taxonomic/taxonomic-map-page';
 
 export const routes: Routes = [{
     path: 'toxonomic-map',
-    component: TaxonomicMapComponent
+    component: TaxonomicMapPageComponent
 }];
