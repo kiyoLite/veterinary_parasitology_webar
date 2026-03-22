@@ -1,4 +1,4 @@
-import { Component, inject, signal } from '@angular/core';
+import { Component, computed, inject, signal } from '@angular/core';
 import { TaxonomicRepository } from '../../../repository/taxonomic.repository';
 import { TaxonomicCategory } from '../../../Interface/taxonomic-category.interface';
 import { TaxonomicNode } from '../taxonomic-node/taxonomic-node';
@@ -24,4 +24,14 @@ export class TaxonomicMapComponent {
     gridRow: 1
   }))
   nodes = signal<TaxonomicGridNode[]>(this.taxonomicRootNodes);
+  mapGridColumns = this.taxonomicRootNodes.length;
+  mapGridRows = signal(1);
+
+  getStyleGridColumns() {
+    return 'repeat(' + this.mapGridColumns + ' , 1fr)';
+  }
+
+  styleGridRows = computed(() => 'repeat(' + this.mapGridRows() + ', 1fr)');
+
+
 }
