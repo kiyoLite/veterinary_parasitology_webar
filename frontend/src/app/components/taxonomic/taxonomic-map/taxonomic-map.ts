@@ -1,11 +1,27 @@
-import { Component } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
+import { TaxonomicRepository } from '../../../repository/taxonomic.repository';
+import { TaxonomicCategory } from '../../../Interface/taxonomic-category.interface';
+import { TaxonomicNode } from '../taxonomic-node/taxonomic-node';
+
+interface TaxonomicGridNode {
+  category: TaxonomicCategory,
+  gridColumn: number,
+  gridRow: number
+}
 
 @Component({
   selector: 'taxonomic-map',
-  imports: [],
+  imports: [TaxonomicNode],
   templateUrl: './taxonomic-map.html',
   styleUrl: './taxonomic-map.css',
 })
 export class TaxonomicMapComponent {
-
+  taxonomicRepository = inject(TaxonomicRepository);
+  rootNodes = this.taxonomicRepository.getRootNodes();
+  taxonomicRootNodes: TaxonomicGridNode[] = this.rootNodes.map((current, index) => ({
+    category: current,
+    gridColumn: index + 1,
+    gridRow: 1
+  }))
+  nodes = signal<TaxonomicGridNode[]>(this.taxonomicRootNodes);
 }
