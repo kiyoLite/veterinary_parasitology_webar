@@ -1,1 +1,6 @@
-<p>taxonomic-map works!</p>
+<section>
+    @for( currentNode of nodes() ; track currentNode.category.id){
+    <taxonomic-node [taxonomicData]="currentNode.category" [gridRow]="currentNode.gridRow"
+        [gridColumn]="currentNode.gridColumn" />
+    }
+</section>
