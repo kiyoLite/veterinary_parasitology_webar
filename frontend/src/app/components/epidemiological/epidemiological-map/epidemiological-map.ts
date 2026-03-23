@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
 
 @Component({
   selector: 'epidemiological-map',
@@ -7,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrl: './epidemiological-map.css',
 })
 export class EpidemiologicalMap {
+  parasitesAreas = input.required<Set<string>>();
+  parasitesByDeparment = input<Record<string, string[]>>();
+
+
 
 }
