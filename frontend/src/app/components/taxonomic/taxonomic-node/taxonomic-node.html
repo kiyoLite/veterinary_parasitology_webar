@@ -1,15 +1,18 @@
-@if (taxonomicData().parasiteID != null) {
-<a [routerLink]="'/parasite' + taxonomicData().parasiteID"> {{taxonomicData().name}}</a>
-}
-@else {
-<select name="" id="">
-    <option [value]="taxonomicData().parasiteID">
-        {{taxonomicData().name}}
-    </option>
-    @for( subCategory of getSubCatories(taxonomicData().id); track $index){
-    <option [value]="subCategory.id">
-        {{subCategory.name}}
-    </option>
+<div>
+
+    @if (taxonomicData().parasiteID != null) {
+    <a [routerLink]="'/parasite' + taxonomicData().parasiteID"> {{taxonomicData().name}}</a>
     }
-</select>
-}
+    @else {
+    <select name="" id="" #node (change)="selectChildNode(node.value)">
+        <option [value]="taxonomicData().parasiteID">
+            {{taxonomicData().name}}
+        </option>
+        @for( subCategory of getSubCatories(taxonomicData().id); track $index){
+        <option [value]="subCategory.id">
+            {{subCategory.name}}
+        </option>
+        }
+    </select>
+    }
+</div>
