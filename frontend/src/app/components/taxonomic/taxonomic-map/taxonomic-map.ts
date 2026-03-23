@@ -27,11 +27,20 @@ export class TaxonomicMapComponent {
   mapGridColumns = this.taxonomicRootNodes.length;
   mapGridRows = signal(1);
 
+
+
   getStyleGridColumns() {
     return 'repeat(' + this.mapGridColumns + ' , 1fr)';
   }
 
   styleGridRows = computed(() => 'repeat(' + this.mapGridRows() + ', 1fr)');
 
+  addNode(node: { column: number, row: number; id: number; }) {
+    const newNode = this.taxonomicRepository.getNodeByID(node.id);
+    if (newNode == null) return;
+    const newGridNode: TaxonomicGridNode = { category: newNode, gridColumn: node.column, gridRow: node.row };
+    this.mapGridRows.update(current => node.row > current ? node.row : current);
+    this.nodes.update(list => [...list, newGridNode]);
+  }
 
 }
