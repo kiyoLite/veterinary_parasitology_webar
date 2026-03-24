@@ -1,1 +1,8 @@
-<p>parasite-popover works!</p>
+<div [style.left]="config().coords.x" [style.top]="config().coords.y">
+    <label for="">{{config().department}}</label>
+    <ul>
+        @for(parasite of config().parasites ; track $index){
+        <li>{{parasite}}</li>
+        }
+    </ul>
+</div>
