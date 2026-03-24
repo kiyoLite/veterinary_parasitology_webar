@@ -1,4 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
+
+interface PopoverConfig {
+  department: string,
+  parasites: string[],
+  coords: {
+    x: number,
+    y: number
+  }
+}
 
 @Component({
   selector: 'parasite-popover',
@@ -8,4 +17,5 @@ import { Component } from '@angular/core';
 })
 export class ParasitePopover {
 
+  config = input.required<PopoverConfig>();
 }
