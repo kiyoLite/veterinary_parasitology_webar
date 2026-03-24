@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-parasite-popover',
+  selector: 'parasite-popover',
   imports: [],
   templateUrl: './parasite-popover.html',
   styleUrl: './parasite-popover.css',
