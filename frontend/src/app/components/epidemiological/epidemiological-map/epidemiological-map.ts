@@ -1,4 +1,4 @@
-import { Component, computed, input, signal } from '@angular/core';
+import { Component, computed, input, OnInit, signal } from '@angular/core';
 import { ParasitePopover } from '../parasite-popover/parasite-popover';
 
 
@@ -17,15 +17,22 @@ interface PopoverConfig {
   templateUrl: './epidemiological-map.html',
   styleUrl: './epidemiological-map.css',
 })
-export class EpidemiologicalMap {
+export class EpidemiologicalMap implements OnInit {
   parasitesAreas = input.required<Set<string>>();
   parasitesByDeparment = input<Map<string, string[]>>();
   timerId: undefined | number = undefined;
   popoverConfig = signal<PopoverConfig | null>(null);
-  debounceShowPopover = this.debounceOrEmptyFunctionIfNotRequireData(this.showParasitesFromDepartment, 1500);
+  debounceShowPopover: (event: MouseEvent) => void = () => { }
+
+  ngOnInit(): void {
+    this.debounceShowPopover = this.debounceOrEmptyFunctionIfNotRequireData(
+      this.showParasitesFromDepartment.bind(this),
+      1500
+    );
+  }
 
   debounceOrEmptyFunctionIfNotRequireData(callback: any, wait: number) {
-    if (!this.parasitesByDeparment()) return () => { }
+    if (this.parasitesByDeparment() == undefined) return () => { }
     return (mouseEvent: MouseEvent) => {
       clearInterval(this.timerId);
       this.timerId = setTimeout(() => {
@@ -38,9 +45,9 @@ export class EpidemiologicalMap {
 
   showParasitesFromDepartment(event: MouseEvent) {
     const clickElement = event.target;
-    if (!(clickElement instanceof SVGAElement)) return;
+    if (!(clickElement instanceof SVGElement)) return;
     const deparment = clickElement!.closest("path")!;
-    const containsDeparmentParasites = deparment.classList.contains(".contains-parasites");
+    const containsDeparmentParasites = deparment.classList.contains("contains-parasites");
     if (!containsDeparmentParasites) return;
     const deparmentName = deparment.getAttribute("title")!;
     this.popoverConfig.set({
