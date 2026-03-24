@@ -1,4 +1,4 @@
-<div id="mapContainer">
+<div id="mapContainer" (mousedown)="debounceShowPopover($event)" (mouseup)="hiddenParasitesFromDepartment()">
     <svg xmlns:mapsvg="http://mapsvg.com" xmlns:dc="http://purl.org/dc/elements/1.1/"
         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg"
         xmlns="http://www.w3.org/2000/svg" width="612.82184" height="693.68036" viewbox="50 0 600 693">
