@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
+import { ParasiteLifeStage } from '../../../Interface/parasite-life-cycle.interface';
 
 @Component({
   selector: 'app-slider-card',
@@ -7,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: './slider-card.css',
 })
 export class SliderCard {
-
+  lifeStage = input.required<ParasiteLifeStage>();
 }
