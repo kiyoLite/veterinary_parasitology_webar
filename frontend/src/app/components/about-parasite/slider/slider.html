@@ -1,1 +1,18 @@
-<p>slider works!</p>
+<div id="slider-container">
+    <aside id="select-card-container">
+        @for( currentItem of items() ; track $index){
+        <app-slider-card [lifeStage]="currentItem" />
+        }
+    </aside>
+</div>
+<div>
+    <li id="card-track">
+        @for(currentItem of items() ;track $index){
+        <ul>
+            <button (click)="setSelectCard($index)"></button>
+        </ul>
+        }
+    </li>
+    <button id="previous-card" (click)="previousCard()"><img src="" alt=""></button>
+    <button id="next-card" (click)="nextCard()"><img src="" alt=""></button>
+</div>
