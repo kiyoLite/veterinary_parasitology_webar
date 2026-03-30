@@ -1,0 +1,83 @@
+:host {
+    width: 100%;
+    max-width: 800px;
+    height: 100%;
+    max-height: 400px;
+}
+
+#slider-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#select-card-container {
+    position: relative;
+    width: 75%;
+    height: 100%;
+}
+
+app-slider-card {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.app-slider-card:not(.current-card, .next-card, .previous-card) {
+    display: none;
+}
+
+.current-card {
+    z-index: 2;
+}
+
+.next-card,
+.previous-card {
+    z-index: 1;
+    opacity: 0.7;
+}
+
+.next-card {
+    transform: translateX(18.5%) scale(0.9);
+}
+
+.previous-card {
+    transform: translateX(-18.5%) scale(0.9);
+
+}
+
+#card-track-container {
+    padding: 10px 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+#previous-card {
+    order: 1;
+}
+
+#next-card {
+    order: 3;
+}
+
+#card-track {
+    display: flex;
+    gap: 3px;
+    order: 2;
+}
+
+#card-track button {
+    width: 30px;
+    height: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+
+}
+
+.selected-card-track {
+    background-color: aqua;
+}
