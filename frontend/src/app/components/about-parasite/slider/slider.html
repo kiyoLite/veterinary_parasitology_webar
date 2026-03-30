@@ -1,18 +1,23 @@
 <div id="slider-container">
-    <aside id="select-card-container">
+    <div id="select-card-container">
         @for( currentItem of items() ; track $index){
-        <app-slider-card [lifeStage]="currentItem" />
+        <app-slider-card [lifeStage]="currentItem" [ngClass]="{
+            'current-card': $index == selectedCardIndex(),
+            'previous-card': ($index + 1) == selectedCardIndex(),
+            'next-card': ($index - 1) == selectedCardIndex()
+        }" />
         }
-    </aside>
+    </div>
 </div>
-<div>
+<nav id="card-track-container">
     <li id="card-track">
         @for(currentItem of items() ;track $index){
         <ul>
-            <button (click)="setSelectCard($index)"></button>
+            <button (click)="setSelectCard($index)"
+                [class.selected-card-track]="$index == selectedCardIndex()"></button>
         </ul>
         }
     </li>
-    <button id="previous-card" (click)="previousCard()"><img src="" alt=""></button>
-    <button id="next-card" (click)="nextCard()"><img src="" alt=""></button>
-</div>
+    <button id="previous-card" (click)="previousCard()"><img src="" alt="">previous</button>
+    <button id="next-card" (click)="nextCard()"><img src="" alt=""> next</button>
+</nav>
