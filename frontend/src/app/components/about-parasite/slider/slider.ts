@@ -1,16 +1,24 @@
 import { Component, input, signal } from '@angular/core';
 import { ParasiteLifeCycle } from '../../../Interface/parasite-life-cycle.interface';
 import { SliderCard } from '../slider-card/slider-card';
+import { NgClass } from '@angular/common';
 
 @Component({
   selector: 'slider',
-  imports: [SliderCard],
+  imports: [SliderCard, NgClass],
   templateUrl: './slider.html',
   styleUrl: './slider.css',
 })
 export class Slider {
-  items = input.required<ParasiteLifeCycle>();
-  selectedCardIndex = signal<number>(0);
+  // items = input.required<ParasiteLifeCycle>();
+  items = signal<ParasiteLifeCycle>([
+    { imageUrl: 'assets/favicon.ico', description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore" },
+    { imageUrl: 'assets/favicon.ico', description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore" },
+    { imageUrl: 'assets/favicon.ico', description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore" },
+    { imageUrl: 'assets/favicon.ico', description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore" }
+
+  ]);
+  selectedCardIndex = signal<number>(1);
   setSelectCard(index: number) {
     this.selectedCardIndex.set(index);
   }
@@ -21,7 +29,7 @@ export class Slider {
 
   nextCard() {
     const amountCards = this.items().length;
-    this.selectedCardIndex.update(current => (current - 1) < amountCards ? current + 1 : current);
+    this.selectedCardIndex.update(current => (current + 1) < amountCards ? current + 1 : current);
 
   }
 }
