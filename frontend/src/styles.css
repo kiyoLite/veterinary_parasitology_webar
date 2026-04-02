@@ -8,3 +8,9 @@
 :root {
     --max-screen-width: 1300px
 }
+
+@font-face {
+    font-family: lato;
+    src: url('../public/assets/fonts/Inter-VariableFont_opsz\,wght.ttf');
+
+}
