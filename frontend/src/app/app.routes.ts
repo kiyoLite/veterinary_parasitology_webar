@@ -1,7 +1,6 @@
 import { Routes } from '@angular/router';
 import { TaxonomicMapPageComponent } from './pages/taxonomic/taxonomic-map-page';
 import { GeneralEpidemiologicalMapPage } from './pages/general-epidemiological-map/general-epidemiological-map-page';
-import { TemporalPage } from './pages/temporal-page/temporal-page';
 import { AboutParasitePage } from './pages/about-parasite/about-parasite-page';
 
 export const routes: Routes = [{
