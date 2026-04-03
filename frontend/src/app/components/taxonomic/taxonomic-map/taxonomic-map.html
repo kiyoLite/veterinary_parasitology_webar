@@ -1,6 +1,15 @@
-<section [style.grid-template-columns]="getStyleGridColumns()" [style.grid-template-rows]="styleGridRows()">
-    @for( currentNode of nodes() ; track currentNode.category.id){
-    <taxonomic-node [taxonomicData]="currentNode.category" [gridRow]="currentNode.gridRow"
-        [gridColumn]="currentNode.gridColumn" (taxonomicNodeChild)="addNode($event)" />
-    }
+<section>
+    <cdk-tree [dataSource]="parasites" [childrenAccessor]="childrenAccessor" #tree>
+        <cdk-nested-tree-node *cdkTreeNodeDef="let node" class="parasite">
+            <a href=""> {{ node.name }}</a>
+        </cdk-nested-tree-node>
+        <cdk-nested-tree-node *cdkTreeNodeDef="let node ; when: hasChildren" class="taxonomic-category">
+            <button cdkTreeNodeToggle>
+                <p> {{node.name}}</p>
+            </button>
+            <div [class.hidden-nodes]="!tree.isExpanded(node)">
+                <ng-container cdkTreeNodeOutlet></ng-container>
+            </div>
+        </cdk-nested-tree-node>
+    </cdk-tree>
 </section>
