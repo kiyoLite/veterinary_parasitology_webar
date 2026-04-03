@@ -8,6 +8,10 @@ export const routes: Routes = [{
     component: TaxonomicMapPageComponent
 },
 {
+    path: '',
+    component: TaxonomicMapPageComponent
+},
+{
     path: 'epidemiological-map',
     component: GeneralEpidemiologicalMapPage
 },
