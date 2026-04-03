@@ -14,3 +14,8 @@
     src: url('../public/assets/fonts/Inter-VariableFont_opsz\,wght.ttf');
 
 }
+
+body {
+    background-color: #1C1D21;
+    margin: 0 30px;
+}
