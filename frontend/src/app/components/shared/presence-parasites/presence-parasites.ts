@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
-import { TaxonomicRepository } from '../../../repository/taxonomic.repository';
 import { ColombiaDepartment, parasitesEachDeparment } from '../../../Interface/deparment-parasites.interface';
+import { EpidemiologicalRepostiory } from '../../../repository/epidemological.repository';
 
 @Component({
   selector: 'app-presence-parasites',
@@ -9,7 +9,8 @@ import { ColombiaDepartment, parasitesEachDeparment } from '../../../Interface/d
   styleUrl: './presence-parasites.css',
 })
 export class PresenceParasites {
-  private taxonomicRepository = inject(TaxonomicRepository)
-  parasiteLocationByDeparment: parasitesEachDeparment = this.taxonomicRepository.getParasitesLocationByDeparment()
-  deparmentsWithParasites = Object.keys(this.parasiteLocationByDeparment) as ColombiaDepartment[];
+  private epidemimiologicalRepository = inject(EpidemiologicalRepostiory)
+  parasiteLocationByDeparment: parasitesEachDeparment = this.epidemimiologicalRepository.getParasitesEachDeparment();
+  deparmentsWithParasites = Array.from(this.parasiteLocationByDeparment.keys()) as ColombiaDepartment[];
+
 }
