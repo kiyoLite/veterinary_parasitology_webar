@@ -1,7 +1,7 @@
 export interface TaxonomicCategory {
-    id: number,
     name: string,
     category: string,
+    children?: TaxonomicCategory
     parasiteID?: number
 }
 
