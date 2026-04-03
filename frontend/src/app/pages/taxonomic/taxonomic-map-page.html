@@ -14,7 +14,8 @@
             <app-presence-parasites></app-presence-parasites>
             }
             @else if(pickSidePanel() == pickSidePanelEnum.TAXONOMIC_CATEGORY_DETAILS){
-            <app-taxonomic-category-details></app-taxonomic-category-details>
+            <app-taxonomic-category-details
+                [taxonomicCategory]="pickTaxonomicCategory()"></app-taxonomic-category-details>
             }
         </main>
     </div>
