@@ -1,0 +1,48 @@
+#presence-parasite-container {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    padding: 20px;
+    align-self: center;
+    overflow-y: auto;
+
+}
+
+h1 {
+    font-family: lato;
+    color: white;
+    font-size: 1.6rem;
+    margin-bottom: 30px;
+    font-weight: 500;
+}
+
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+}
+
+.deparments-list h2 {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+    font-weight: 500;
+
+
+}
+
+.parasite-list {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    font-size: 1.3rem;
+    color: white;
+
+
+}
