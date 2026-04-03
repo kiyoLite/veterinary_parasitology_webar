@@ -1,4 +1,21 @@
 <header-component />
 <main>
     <taxonomic-map />
+    <div id="taxonomic-details-container" [class.hidden-side-panel]="pickSidePanel() == pickSidePanelEnum.NONE">
+        <header>
+            <nav>
+                <button>presencia</button>
+                <button>informacion</button>
+            </nav>
+            <button><img src="" alt=""></button>
+        </header>
+        <main>
+            @if(pickSidePanel() == pickSidePanelEnum.PRESENCE_PARASITES){
+            <app-presence-parasites></app-presence-parasites>
+            }
+            @else if(pickSidePanel() == pickSidePanelEnum.TAXONOMIC_CATEGORY_DETAILS){
+            <app-taxonomic-category-details></app-taxonomic-category-details>
+            }
+        </main>
+    </div>
 </main>
