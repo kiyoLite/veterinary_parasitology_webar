@@ -1,2 +1,8 @@
-<epidemiological-map [parasitesAreas]="deparmentsWithParasites"
-    [parasitesByDeparment]="parasitesEachDeparment"></epidemiological-map>
+<header-component></header-component>
+<main>
+    <epidemiological-map [parasitesAreas]="deparmentsWithParasites" [parasitesByDeparment]="parasitesEachDeparment"
+        id="map" />
+    <div id="presence-parasite-side-bar">
+        <app-presence-parasites></app-presence-parasites>
+    </div>
+</main>
