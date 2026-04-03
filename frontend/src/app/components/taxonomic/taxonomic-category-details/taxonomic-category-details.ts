@@ -14,7 +14,4 @@ export class TaxonomicCategoryDetails {
     if (this.taxonomicCategory() === null) return '';
     return this.taxonomicRepository.getDetailsFromTaxonomicCategory(this.taxonomicCategory()!);
   });
-
-
-  )
 }
