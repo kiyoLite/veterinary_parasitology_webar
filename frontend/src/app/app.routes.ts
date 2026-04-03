@@ -4,7 +4,7 @@ import { GeneralEpidemiologicalMapPage } from './pages/general-epidemiological-m
 import { AboutParasitePage } from './pages/about-parasite/about-parasite-page';
 
 export const routes: Routes = [{
-    path: 'toxonomic-map',
+    path: 'taxonomic-map',
     component: TaxonomicMapPageComponent
 },
 {
