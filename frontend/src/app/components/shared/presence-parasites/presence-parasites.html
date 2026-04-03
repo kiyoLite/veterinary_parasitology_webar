@@ -1,1 +1,19 @@
-<p>presence-parasites works!</p>
+<div id="presence-parasite-container">
+    <h1>Presencia de parasitos</h1>
+
+    <ul class="deparments-list">
+        @for( deparment of deparmentsWithParasites ; track deparment){
+
+        <li>
+            <h2>deparment</h2>
+            <ul class="parasite-list">
+                @for(parasite of parasiteLocationByDeparment.get(deparment) ; track parasite){
+                <li>{{parasite}}</li>
+
+                }
+            </ul>
+        </li>
+        }
+
+    </ul>
+</div>
