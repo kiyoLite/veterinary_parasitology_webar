@@ -1,3 +1,15 @@
-<div>
-    <slider></slider>
-</div>
+<header-component></header-component>
+<main>
+    <h1>{{parasite()}}</h1>
+    <app-parasite-model></app-parasite-model>
+    <section>
+        <a href="">mapa epidemiologico</a>
+        <a href="">hacer quiz</a>
+    </section>
+    <section>
+        <slider [items]="lifeCycle()"></slider>
+    </section>
+    <section>
+        <p> {{description()}}</p>
+    </section>
+</main>
