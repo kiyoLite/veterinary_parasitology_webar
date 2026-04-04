@@ -4,7 +4,7 @@
             <a href=""> {{ node.name }}</a>
         </cdk-nested-tree-node>
         <cdk-nested-tree-node *cdkTreeNodeDef="let node ; when: hasChildren" class="taxonomic-category">
-            <button cdkTreeNodeToggle>
+            <button cdkTreeNodeToggle (click)="selectTaxonomicNode.emit(node.name)">
                 <p> {{node.name}}</p>
             </button>
             <div [class.hidden-nodes]="!tree.isExpanded(node)">

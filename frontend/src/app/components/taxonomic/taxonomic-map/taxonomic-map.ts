@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, output } from '@angular/core';
 import { TaxonomicRepository } from '../../../repository/taxonomic.repository';
 import { TaxonomicCategory } from '../../../Interface/taxonomic-category.interface';
 import { CdkTreeModule } from '@angular/cdk/tree';
@@ -22,6 +22,11 @@ export class TaxonomicMapComponent {
   parasites = new ArrayDataSource<TaxonomicCategory>(this.mapNodesData);
   childrenAccessor = (node: TaxonomicCategory) => node.children ?? [];
   hasChildren = (_: number, node: TaxonomicCategory) => !!node.children && node.children.length > 0;
+  selectTaxonomicNode = output<string>();
+
+
+
+
 }
 
 
