@@ -6,11 +6,15 @@ import { ColombiaDepartment, parasitesEachDeparment } from "../Interface/deparme
 })
 export class EpidemiologicalRepostiory {
     getParasitesEachDeparment(): parasitesEachDeparment {
-        throw new Error('Method not defined');
+        const parasitesEachDeparment = new Map<ColombiaDepartment, string[]>();
+        parasitesEachDeparment.set('Amazonas', ['parasito 1', 'parasito 2', 'parasito 3']);
+        parasitesEachDeparment.set('Risaralda', ['parasito 1', 'parasito 2', 'parasito 3']);
+        parasitesEachDeparment.set('Distrito Capital de Bogota', ['parasito 1', 'parasito 2', 'parasito 3']);
+        return parasitesEachDeparment;
     }
 
-    getDeparmentParasiteExist(parasite: string): ColombiaDepartment {
-        throw new Error('Method not defined');
+    getDeparmentsParasiteExist(parasite: string): ColombiaDepartment[] {
+        return ['Risaralda', 'Amazonas', 'Antioquia', 'Choco', 'Cesar'];
     }
 
 }
