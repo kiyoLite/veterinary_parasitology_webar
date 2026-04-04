@@ -1,7 +1,7 @@
 <section>
     <cdk-tree [dataSource]="parasites" [childrenAccessor]="childrenAccessor" #tree>
         <cdk-nested-tree-node *cdkTreeNodeDef="let node" class="parasite">
-            <a href=""> {{ node.name }}</a>
+            <a [routerLink]="['/about-parasite',node.name]"> {{ node.name }}</a>
         </cdk-nested-tree-node>
         <cdk-nested-tree-node *cdkTreeNodeDef="let node ; when: hasChildren" class="taxonomic-category">
             <button cdkTreeNodeToggle (click)="selectTaxonomicNode.emit(node.name)">

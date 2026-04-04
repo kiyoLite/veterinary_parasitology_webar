@@ -3,6 +3,7 @@ import { TaxonomicRepository } from '../../../repository/taxonomic.repository';
 import { TaxonomicCategory } from '../../../Interface/taxonomic-category.interface';
 import { CdkTreeModule } from '@angular/cdk/tree';
 import { ArrayDataSource } from '@angular/cdk/collections';
+import { RouterLink } from '@angular/router';
 
 interface TaxonomicGridNode {
   category: TaxonomicCategory,
@@ -12,7 +13,7 @@ interface TaxonomicGridNode {
 
 @Component({
   selector: 'taxonomic-map',
-  imports: [CdkTreeModule],
+  imports: [CdkTreeModule, RouterLink],
   templateUrl: './taxonomic-map.html',
   styleUrl: './taxonomic-map.css',
 })
