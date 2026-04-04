@@ -10,14 +10,7 @@ import { NgClass } from '@angular/common';
   styleUrl: './slider.css',
 })
 export class Slider {
-  // items = input.required<ParasiteLifeCycle>();
-  items = signal<ParasiteLifeCycle>([
-    { imageUrl: 'assets/favicon.ico', description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore" },
-    { imageUrl: 'assets/favicon.ico', description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore" },
-    { imageUrl: 'assets/favicon.ico', description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore" },
-    { imageUrl: 'assets/favicon.ico', description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore" }
-
-  ]);
+  items = input.required<ParasiteLifeCycle>();
   selectedCardIndex = signal<number>(1);
   setSelectCard(index: number) {
     this.selectedCardIndex.set(index);
