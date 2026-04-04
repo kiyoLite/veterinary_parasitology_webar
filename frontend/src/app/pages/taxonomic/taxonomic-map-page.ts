@@ -1,4 +1,4 @@
-import { Component, inject, signal, WritableSignal } from '@angular/core';
+import { Component, effect, inject, signal, WritableSignal } from '@angular/core';
 import { HeaderComponent } from "../../components/shared/header/header";
 import { TaxonomicMapComponent } from "../../components/taxonomic/taxonomic-map/taxonomic-map";
 import { PresenceParasites } from '../../components/shared/presence-parasites/presence-parasites';
@@ -18,5 +18,22 @@ export class TaxonomicMapPageComponent {
   pickSidePanelEnum = PickSidePanel;
   pickSidePanel = signal<PickSidePanel>(this.pickSidePanelEnum.NONE);
   pickTaxonomicCategory = signal<string | null>(null);
+  displayTaxonomicCategoryDetailsPanel() {
+    this.pickSidePanel.set(this.pickSidePanelEnum.TAXONOMIC_CATEGORY_DETAILS);
+  }
+  closePanel() {
+    this.pickSidePanel.set(this.pickSidePanelEnum.NONE);
+  }
+  displayPresenceParasitePanel() {
+    this.pickSidePanel.set(this.pickSidePanelEnum.PRESENCE_PARASITES);
+  }
+
+  updateTaxonomicCategoryAndDisplayPanel(category: string) {
+    this.pickTaxonomicCategory.set(category);
+    this.displayTaxonomicCategoryDetailsPanel();
+  }
+
+
+
 
 }

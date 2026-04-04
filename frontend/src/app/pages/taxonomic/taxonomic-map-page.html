@@ -1,13 +1,13 @@
 <header-component />
 <main>
-    <taxonomic-map />
+    <taxonomic-map (selectTaxonomicNode)="updateTaxonomicCategoryAndDisplayPanel($event)" />
     <div id="taxonomic-details-container" [class.hidden-side-panel]="pickSidePanel() == pickSidePanelEnum.NONE">
         <header>
             <nav>
-                <button>presencia</button>
-                <button>informacion</button>
+                <button (click)="displayPresenceParasitePanel()">presencia</button>
+                <button (click)="displayTaxonomicCategoryDetailsPanel()">informacion</button>
             </nav>
-            <button><img src="" alt=""></button>
+            <button (click)="closePanel()"><img src="" alt=" close side panel"></button>
         </header>
         <main>
             @if(pickSidePanel() == pickSidePanelEnum.PRESENCE_PARASITES){
