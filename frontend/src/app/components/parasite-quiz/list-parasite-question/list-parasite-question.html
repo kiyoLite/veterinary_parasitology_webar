@@ -1,1 +1,3 @@
-<p>list-parasite-question works!</p>
+@for( currentQuestion of questions() ; track $index){
+<app-parasite-question [isSubmit]="isSubmit()" [question]="currentQuestion"></app-parasite-question>
+}
