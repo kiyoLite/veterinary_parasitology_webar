@@ -6,7 +6,7 @@
     </section>
     <section id="extra-links-about-parasite-container">
         <a href="">mapa epidemiologico</a>
-        <a href="">hacer quiz</a>
+        <a [routerLink]="['/parasite-quiz',parasite]">hacer quiz</a>
     </section>
     <section id="parasite-life-cycle-container">
         <slider [items]="lifeCycle()"></slider>
