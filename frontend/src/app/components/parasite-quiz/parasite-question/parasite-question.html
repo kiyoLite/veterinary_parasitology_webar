@@ -1,1 +1,16 @@
-<p>parasite-question works!</p>
+<form action="" #QuestionForm>
+    <fieldset>
+        <legend>
+            {{question().title}}
+        </legend>
+        @for( currentOption of question().options ; track $index){
+        <div class="answer-option-container">
+
+            <label for="$index" [class.correct-answer]="isSubmit() && isCorrectOption(QuestionForm,$index)"
+                [class.incorrect-answer]="isSubmit() && isIncorrectOption(QuestionForm,$index)">{{currentOption}}
+            </label>
+            <input type="radio" name="question" [value]="$index" [id]="$index">
+        </div>
+        }
+    </fieldset>
+</form>
