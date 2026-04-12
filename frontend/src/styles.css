@@ -6,7 +6,9 @@
 }
 
 :root {
-    --max-screen-width: 1300px
+    --max-screen-width: 1300px;
+    --max-width-main-content: 850px;
+    --max-width-side-panel: 500px;
 }
 
 @font-face {
