@@ -1,11 +1,24 @@
 #presence-parasite-container {
     width: 100%;
     height: 100%;
-    border-radius: 20px;
-    padding: 20px;
     align-self: center;
     overflow-y: auto;
 
+}
+
+header {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 20px;
+
+}
+
+header img {
+    width: 1.8rem;
+    height: 1.8rem;
+    filter: invert(1);
+    margin: auto 0;
 }
 
 h1 {
@@ -14,35 +27,66 @@ h1 {
     font-size: 1.6rem;
     margin-bottom: 30px;
     font-weight: 500;
+    margin: auto 0;
 }
 
 
 ul {
     list-style: none;
+
+}
+
+.deparments-list {
+
     display: flex;
     flex-direction: column;
     gap: 15px;
+}
+
+.deparments-list>li {
+    background-color: #bebebe0a;
+    border-radius: 10px;
+    padding: 10px 30px 15px;
+    border-left: solid 4px rgb(89, 18, 131);
 
 }
 
 .deparments-list h2 {
+    font-family: red-hatmono;
     color: white;
-    font-family: Arial, Helvetica, sans-serif;
     text-transform: capitalize;
-    margin-bottom: 10px;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     font-weight: 500;
+    margin-bottom: 7px;
 
 
 }
 
 .parasite-list {
-    margin-left: 20px;
+    font-family: red-hatmono;
+    margin-left: 10px;
     display: flex;
     flex-direction: column;
     gap: 3px;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     color: white;
 
 
+}
+
+.parasite-list li {
+    position: relative;
+}
+
+.parasite-list ::before {
+    position: absolute;
+    content: '';
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    border-radius: 100%;
+    top: 40%;
+    left: -12px;
+    background-color: #cecece34;
+    transform: translateY(50%);
 }

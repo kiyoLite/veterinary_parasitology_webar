@@ -1,0 +1,28 @@
+:host>div {
+    overflow-y: auto;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 1.6rem;
+    font-family: lato;
+}
+
+header img {
+    width: 30px;
+    height: 30px;
+    filter: invert(1);
+}
+
+p {
+    color: white;
+    font-size: 1.2 rem;
+    font-family: red-hatmono;
+}

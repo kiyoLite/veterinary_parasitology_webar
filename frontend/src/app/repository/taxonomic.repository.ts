@@ -80,7 +80,12 @@ export class TaxonomicRepository {
 
     }
     getDetailsFromTaxonomicCategory(category: string): string {
-        return 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'
+        return `El ácaro de la familia Sarcoptidae incluye especies como Sarcoptes scabiei, responsable 
+        de la sarna sarcóptica en mamíferos. Es un ectoparásito microscópico que excava túneles en la piel
+        , donde deposita sus huevos. Provoca intenso prurito, inflamación y lesiones cutáneas. Se transmite
+         por contacto directo entre hospedadores. Su ciclo de vida ocurre completamente en el huésped
+         . Afecta a animales domésticos y silvestres, y algunas variantes pueden infectar temporalmente
+          a humanos. El diagnóstico se realiza mediante raspados cutáneos y observación microscópica.`
     }
 
 
