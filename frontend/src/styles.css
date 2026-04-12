@@ -15,6 +15,11 @@
 
 }
 
+@font-face {
+    font-family: red-hatmono;
+    src: url('../public/assets/fonts/RedHatMono-VariableFont_wght.ttf')
+}
+
 body {
     background-color: #1C1D21;
     margin: 0 30px;
