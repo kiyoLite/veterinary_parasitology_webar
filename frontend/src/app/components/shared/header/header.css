@@ -4,7 +4,7 @@ header {
     padding: 30px 0 20px;
     justify-content: space-between;
     box-sizing: border-box;
-    max-width: var(--max-screen-width);
+    max-width: var(--max-width-main-content);
     margin: 0 auto;
     border-bottom: solid 2px #38393f;
 }
