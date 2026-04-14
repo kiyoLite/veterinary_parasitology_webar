@@ -1,4 +1,4 @@
-import { Component, computed, input, OnInit, signal } from '@angular/core';
+import { Component, input, OnInit, signal } from '@angular/core';
 import { ParasitePopover } from '../parasite-popover/parasite-popover';
 
 
@@ -18,6 +18,7 @@ interface PopoverConfig {
   styleUrl: './epidemiological-map.css',
 })
 export class EpidemiologicalMap implements OnInit {
+
   parasitesAreas = input.required<Set<string>>();
   parasitesByDeparment = input<Map<string, string[]>>();
   timerId: undefined | number = undefined;
@@ -50,11 +51,12 @@ export class EpidemiologicalMap implements OnInit {
     const containsDeparmentParasites = deparment.classList.contains("contains-parasites");
     if (!containsDeparmentParasites) return;
     const deparmentName = deparment.getAttribute("title")!;
+    const xGapForAccessibility = 5;
     this.popoverConfig.set({
       department: deparmentName,
       parasites: this.parasitesByDeparment()!.get(deparmentName)!,
       coords: {
-        x: event.pageX,
+        x: event.pageX + xGapForAccessibility,
         y: event.pageY
       }
     })
@@ -64,7 +66,6 @@ export class EpidemiologicalMap implements OnInit {
     clearTimeout(this.timerId);
     this.popoverConfig.set(null);
   }
-
 
 
 }

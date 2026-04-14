@@ -1,4 +1,58 @@
-div {
+#popover {
     position: absolute;
+    background-color: #202741;
+    min-width: 100px;
+    max-width: 200px;
+    height: fit-content;
+    width: fit-content;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 10px;
+}
+
+header {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+}
+
+header img {
+    width: 15px;
+    height: 15px;
+    filter: grayscale(1) invert(1);
+}
+
+header h1 {
+    font-size: 0.8rem;
+    font-family: red-hatmono;
+    color: white;
+    font-weight: 600;
+    display: inline-block;
+}
+
+ul {
+    display: flex;
+    text-decoration: none;
+    font-family: lato;
+    font-size: 0.7rem;
+    color: white;
+    flex-wrap: wrap;
+}
+
+ul li {
+    display: inline-block;
+    text-wrap: nowrap;
+}
+
+ul li::after {
+    content: ',';
+    font-family: lato;
+    font-size: 0.7rem;
+    color: white;
+}
+
+ul li:last-child:after {
+    content: '';
 
 }

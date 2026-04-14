@@ -1,5 +1,8 @@
-<div [style.left]="config().coords.x + 'px'" [style.top]="config().coords.y + 'px'">
-    <label for="">{{config().department}}</label>
+<div id="popover" [style.left]="config().coords.x + 'px'" [style.top]="config().coords.y + 'px'">
+    <header>
+        <img src="assets/icons/bug-svgrepo-com.svg" alt="">
+        <h1>{{config().department}}:</h1>
+    </header>
     <ul>
         @for(parasite of config().parasites ; track $index){
         <li>{{parasite}}</li>
