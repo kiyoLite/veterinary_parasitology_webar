@@ -1,6 +1,10 @@
 <div class="card">
-    <div>
-        <img [src]="lifeStage().imageUrl" alt="">
+    <div class="card-image-container">
+        <img [src]="" alt="">
+        <!-- <img [src]="lifeStage().imageUrl" alt=""> -->
     </div>
-    <p>{{lifeStage().description}}</p>
+    <div class="card-text-container">
+        <h1>{{lifeStage().stage}}</h1>
+        <p>{{lifeStage().description}}</p>
+    </div>
 </div>

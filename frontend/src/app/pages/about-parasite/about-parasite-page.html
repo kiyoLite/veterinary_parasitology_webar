@@ -1,11 +1,14 @@
 <header-component></header-component>
 <main>
-    <h1>{{parasite()}}</h1>
+    <header>
+        <img src="assets/icons/bug-svgrepo-com.svg" alt="">
+        <h1>{{parasite()}}</h1>
+    </header>
     <section id="parasite-model-container">
-        <app-parasite-model></app-parasite-model>
+        <!-- <app-parasite-model></app-parasite-model> -->
     </section>
     <section id="extra-links-about-parasite-container">
-        <a href="">mapa epidemiologico</a>
+        <a href="">ubicaciones parasitos</a>
         <a [routerLink]="['/parasite-quiz',parasite]">hacer quiz</a>
     </section>
     <section id="parasite-life-cycle-container">
