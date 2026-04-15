@@ -1,10 +1,19 @@
 <header-component></header-component>
 <main>
-    <h1> quiz {{parasiteName()}}</h1>
-    <form action="">
+    <!-- <h1> quiz {{ parasiteName}}</h1> -->
+    <h1> Quiz Anopheles gambiae</h1>
+    <form action="" id="quiz">
         <app-list-parasite-question [questions]="questions" [isSubmit]="isFormSumbit()"></app-list-parasite-question>
-        <button type="submit" (submit)="submitForm($event)">ver respuestas</button>
     </form>
-    <button>volver anterior pagina</button>
+    <div>
+
+        <button id="return-last-page-button">
+            <img src="assets/icons/arrow.svg" alt="">
+            <p>volver anterior pagina</p>
+
+        </button>
+        <button type="submit" (submit)="submitForm($event)" form="quiz" id="checkout-answers-button">ver
+            respuestas</button>
+    </div>
 
 </main>

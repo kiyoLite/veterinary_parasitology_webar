@@ -1,5 +1,55 @@
 main {
     width: 100%;
-    max-width: var(--max-screen-width);
+    max-width: var(--max-width-main-content);
     margin: 0 auto;
+}
+
+h1 {
+    padding: 20px 0;
+    color: white;
+    font-family: red-hatmono;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+form+div {
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+
+button {
+    border: none;
+    background: none;
+    color: white;
+    font-family: lato;
+    cursor: pointer;
+}
+
+#return-last-page-button {
+    opacity: 0.6;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+#return-last-page-button :hover {
+    opacity: 0.8;
+}
+
+#return-last-page-button img {
+    width: 10px;
+    height: 10px;
+    rotate: 180deg;
+    filter: invert(1);
+}
+
+#checkout-answers-button {
+    padding: 6px 8px;
+    border: solid 2px #7f2bc4;
+    border-radius: 5px;
 }
