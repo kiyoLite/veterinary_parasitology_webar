@@ -3,8 +3,9 @@ fieldset {
 }
 
 legend {
-
-    color: white
+    font-family: red-hatmono;
+    color: white;
+    margin-bottom: 20px;
 }
 
 
@@ -13,8 +14,31 @@ legend {
     gap: 10px;
 }
 
+div {
+    background-color: #313237;
+    border: solid 2px rgba(255, 255, 255, 0.208);
+    padding: 15px 7px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+
+}
+
+div:hover {
+    background-color: #434449;
+
+}
+
+
+input {
+    cursor: pointer;
+}
+
 
 label {
     color: white;
     order: 2;
+    font-family: lato;
+    font-size: 1rem;
+    cursor: pointer;
 }
