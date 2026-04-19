@@ -13,8 +13,8 @@ export class EpidemiologicalRepostiory {
         return parasitesEachDeparment;
     }
 
-    getDeparmentsParasiteExist(parasite: string): ColombiaDepartment[] {
-        return ['Risaralda', 'Amazonas', 'Antioquia', 'Choco', 'Cesar'];
+    getDeparmentsParasiteExist(parasite: string): Set<ColombiaDepartment> {
+        return new Set(['Risaralda', 'Amazonas', 'Antioquia', 'Choco', 'Cesar']);
     }
 
 }
