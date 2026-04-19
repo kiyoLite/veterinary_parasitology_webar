@@ -1,0 +1,26 @@
+ :host {
+     height: 100dvh;
+     display: grid;
+     grid-template-rows: 100px 1fr;
+
+ }
+
+
+
+ :host>main {
+     height: 100%;
+     margin: 0 auto;
+     display: grid;
+     grid-template-columns: 1fr var(--max-width-main-content) 1fr;
+     width: 100%;
+     max-width: var(--max-screen-width);
+ }
+
+ epidemiological-map {
+     height: 100%;
+     grid-column: 2/3;
+ }
+
+ #map {
+     width: 100%;
+ }
