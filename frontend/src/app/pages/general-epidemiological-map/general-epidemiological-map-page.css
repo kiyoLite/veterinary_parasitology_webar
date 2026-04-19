@@ -27,12 +27,13 @@
  }
 
  #presence-parasite-side-bar {
+     width: 100%;
      max-width: var(--max-width-side-panel);
      grid-template-columns: 3/4;
      width: 100%;
      min-height: 400px;
      height: fit-content;
      border-radius: 10px;
-     padding: 0 20px 20px;
+     padding: 20px;
      background-color: #17171a;
  }

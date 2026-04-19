@@ -90,3 +90,16 @@ ul {
     background-color: #cecece34;
     transform: translateY(50%);
 }
+
+
+@media (max-height:1536px) {
+    header img {
+        width: 1.4rem;
+        height: 1.4rem;
+    }
+
+    h1 {
+        font-size: 1.4rem;
+    }
+
+}

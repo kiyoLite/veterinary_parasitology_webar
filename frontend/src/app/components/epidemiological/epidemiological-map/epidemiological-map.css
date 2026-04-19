@@ -18,7 +18,7 @@ path {
 }
 
 
-@media (max-height:7655px) {
+@media (max-height:1536px) {
     svg {
         scale: 0.90;
         transform: translateY(-25px);
