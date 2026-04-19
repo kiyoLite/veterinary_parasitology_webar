@@ -9,9 +9,19 @@ export class AboutParasiteRepository {
     getParasiteLifeCycle(parasite: string): ParasiteLifeCycle {
         return [
             {
+                stage: "Mimetismo Adaptativo",
+                imageUrl: "assets/icons/magnifying-glass.svg",
+                description: "En su etapa adulta, el parásito puede manipular su estructura celular a voluntad, permitiéndole endurecer tejidos para el combate o alterar su apariencia física para pasar desapercibido entre los humanos."
+            },
+            {
                 stage: "Infiltración Silenciosa",
                 imageUrl: "assets/icons/magnifying-glass.svg",
                 description: "El ciclo comienza con una pequeña espora que desciende desde la atmósfera. Al eclosionar, una criatura similar a un gusano busca perforar la piel del huésped para llegar al sistema nervioso central."
+            },
+            {
+                stage: "Mimetismo Adaptativo",
+                imageUrl: "assets/icons/magnifying-glass.svg",
+                description: "En su etapa adulta, el parásito puede manipular su estructura celular a voluntad, permitiéndole endurecer tejidos para el combate o alterar su apariencia física para pasar desapercibido entre los humanos."
             },
             {
                 stage: "Maduración y Sustitución",
