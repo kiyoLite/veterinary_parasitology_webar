@@ -24,3 +24,33 @@
  #map {
      width: 100%;
  }
+
+ #return-last-page-button {
+     opacity: 0.6;
+     display: flex;
+     gap: 10px;
+     align-items: center;
+     border: none;
+     background: none;
+     color: white;
+     font-family: lato;
+     cursor: pointer;
+ }
+
+ #return-last-page-button :hover {
+     opacity: 0.8;
+ }
+
+ #return-last-page-button img {
+     width: 10px;
+     height: 10px;
+     rotate: 180deg;
+     filter: invert(1);
+ }
+
+ #navigation-container {
+     width: 100%;
+     max-width: var(--max-width-main-content);
+     margin: 0 auto;
+     padding: 10px 0 40px;
+ }

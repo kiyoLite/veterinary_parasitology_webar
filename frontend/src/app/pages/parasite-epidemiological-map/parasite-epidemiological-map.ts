@@ -6,10 +6,11 @@ import { ActivatedRoute } from '@angular/router';
 import { map } from 'rxjs';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { EpidemiologicalRepostiory } from '../../repository/epidemological.repository';
+import { NavigateBack } from '../../directives/shared/navigate-back';
 
 @Component({
   selector: 'app-parasite-epidemiological-map',
-  imports: [EpidemiologicalMap, HeaderComponent, PresenceParasites],
+  imports: [EpidemiologicalMap, HeaderComponent, NavigateBack],
   templateUrl: './parasite-epidemiological-map.html',
   styleUrl: './parasite-epidemiological-map.css',
 })
