@@ -5,10 +5,11 @@ import { map } from 'rxjs';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { HeaderComponent } from "../../components/shared/header/header";
 import { ListParasiteQuestion } from "../../components/parasite-quiz/list-parasite-question/list-parasite-question";
+import { NavigateBack } from '../../directives/shared/navigate-back';
 
 @Component({
   selector: 'app-parasite-quiz',
-  imports: [HeaderComponent, ListParasiteQuestion],
+  imports: [HeaderComponent, ListParasiteQuestion, NavigateBack],
   templateUrl: './parasite-quiz.html',
   styleUrl: './parasite-quiz.css',
 })
