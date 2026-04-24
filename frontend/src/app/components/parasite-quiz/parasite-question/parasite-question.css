@@ -12,19 +12,16 @@ legend {
 .answer-option-container {
     display: flex;
     gap: 10px;
-}
-
-div {
     background-color: #313237;
     border: solid 2px rgba(255, 255, 255, 0.208);
     padding: 15px 7px;
     margin-bottom: 10px;
     cursor: pointer;
     border-radius: 10px;
-
 }
 
-div:hover {
+
+.answer-option-container:not(.correct-answer, .incorrect-answer):hover {
     background-color: #434449;
 
 }
@@ -41,4 +38,13 @@ label {
     font-family: lato;
     font-size: 1rem;
     cursor: pointer;
+}
+
+.correct-answer {
+    background-color: rgba(15, 114, 30, 0.263);
+}
+
+.incorrect-answer {
+    background-color: rgba(114, 15, 15, 0.263);
+
 }

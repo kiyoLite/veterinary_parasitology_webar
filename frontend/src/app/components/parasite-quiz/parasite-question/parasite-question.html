@@ -4,13 +4,13 @@
             {{question().title}}
         </legend>
         @for( currentOption of question().options ; track $index){
-        <div class="answer-option-container">
 
-            <label for="$index" [class.correct-answer]="isSubmit() && isCorrectOption(QuestionForm,$index)"
-                [class.incorrect-answer]="isSubmit() && isIncorrectOption(QuestionForm,$index)">{{currentOption}}
-            </label>
-            <input type="radio" name="question" [value]="$index" [id]="$index">
-        </div>
+        <label [for]="$index + question().title" class="answer-option-container"
+            [class.correct-answer]="isSubmit() && isCorrectOption(QuestionForm,$index)"
+            [class.incorrect-answer]="isSubmit() && isIncorrectOption(QuestionForm,$index)">
+            <input type="radio" name="question" [value]="$index" [id]="$index + question().title">
+            <p>{{currentOption}}</p>
+        </label>
         }
     </fieldset>
 </form>
