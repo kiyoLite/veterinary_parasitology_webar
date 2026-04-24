@@ -1,0 +1,100 @@
+:host>* {
+    width: 100%;
+    max-width: var(--max-width-main-content);
+    margin: 0 auto;
+}
+
+h1,
+h2,
+h3 {
+    color: white;
+    font-family: lato;
+}
+
+h1 {
+    font-size: 1.5rem;
+    padding: 20px 0 10px;
+}
+
+h2 {
+    font-size: 1.3rem;
+}
+
+h3 {
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+}
+
+p {
+    color: rgba(255, 255, 255, 0.773);
+    font-family: red-hatmono;
+}
+
+:host>div {
+    padding: 20px 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    justify-content: center;
+}
+
+button,
+a {
+    border: none;
+    background: none;
+    padding: 10px;
+    border-radius: 6px;
+    background-color: rgb(73, 73, 213);
+    width: 100%;
+    cursor: pointer;
+    margin: 0 auto;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+button:hover,
+a:hover {
+    background-color: rgb(50, 50, 175);
+
+
+}
+
+button p,
+a p {
+    font-size: 1rem;
+    font-family: lato;
+    margin: 0 auto;
+}
+
+button small,
+a small {
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.508);
+    font-family: lato;
+    margin: 0 auto;
+}
+
+section div {
+    width: 100%;
+    height: 60px;
+    background-color: #414044;
+    border-radius: 10px;
+    border: solid white;
+    margin: 12px 0;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+section>p {
+    margin-bottom: 10px;
+}
+
+footer>p {
+    margin-bottom: 25px;
+}
