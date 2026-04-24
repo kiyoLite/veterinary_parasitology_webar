@@ -4,6 +4,7 @@ import { GeneralEpidemiologicalMapPage } from './pages/general-epidemiological-m
 import { AboutParasitePage } from './pages/about-parasite/about-parasite-page';
 import { ParasiteQuiz } from './pages/parasite-quiz/parasite-quiz';
 import { ParasiteEpidemiologicalMap } from './pages/parasite-epidemiological-map/parasite-epidemiological-map';
+import { HomePage } from './pages/home/home';
 
 export const routes: Routes = [{
     path: 'taxonomic-map',
@@ -11,7 +12,7 @@ export const routes: Routes = [{
 },
 {
     path: '',
-    component: TaxonomicMapPageComponent
+    component: HomePage
 },
 {
     path: 'epidemiological-map/:parasite',
